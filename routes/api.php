@@ -1,3 +1,4 @@
+
 <?php
 
 use Illuminate\Support\Facades\Route;
@@ -6,6 +7,11 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\FuncionarioController;
 use App\Http\Controllers\DesafioController;
 use App\Http\Controllers\RelatorioController;
+
+
+Route::get('/ping', function () {
+    return response()->json(['pong' => true]);
+});
 
 // ✅ ROTA DE TESTE AQUI
 Route::get('/teste', function () {
